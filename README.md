@@ -1,2 +1,2 @@
-# https://<GITHUB_kuhns926>.github.io/<REPO_NAME>/.
+<GITHUB_kuhns926>.github.io
 <!DOCTYPE html>
