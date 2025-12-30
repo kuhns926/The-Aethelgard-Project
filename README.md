@@ -1,2 +1,2 @@
-<GITHUB_kuhns926>.github.io
+<GITHUB_kuhns926> .index.html
 <!DOCTYPE html>
