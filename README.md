@@ -1,2 +1,331 @@
-# The-Aethelgard-Project
-Main site
+# Aethelgardindex.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AETHELGARD | For the Families & The Future</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400;600;900&display=swap');
+        
+        :root {
+            --primary: #10b981;
+            --secondary: #0ea5e9;
+            --accent: #8b5cf6;
+            --bg: #020617;
+        }
+
+        body { 
+            background-color: var(--bg); 
+            color: #f8fafc; 
+            font-family: 'Inter', sans-serif; 
+            scroll-behavior: smooth; 
+            overflow-x: hidden;
+            margin: 0;
+        }
+
+        .heading { font-family: 'Space Grotesk', sans-serif; }
+        
+        .glass { 
+            background: rgba(15, 23, 42, 0.7); 
+            backdrop-filter: blur(16px); 
+            border: 1px solid rgba(255, 255, 255, 0.08); 
+        }
+
+        .gradient-text { 
+            background: linear-gradient(135deg, #10b981, #0ea5e9, #8b5cf6); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.2);
+        }
+
+        .hero-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80vw;
+            height: 80vw;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.05) 0%, transparent 70%);
+            z-index: -1;
+        }
+
+        #legal-view {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            color: black;
+            z-index: 100;
+            overflow-y: auto;
+            padding: 40px;
+        }
+
+        .job-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="main-view">
+        <div class="hero-glow"></div>
+
+        <!-- Navigation -->
+        <nav class="fixed top-0 w-full z-50 glass px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center font-bold text-white shadow-lg shadow-emerald-500/20">A</div>
+                <span class="heading font-bold text-xl tracking-tighter">AETHELGARD</span>
+            </div>
+            <div class="hidden md:flex gap-8 text-[10px] font-black uppercase tracking-widest text-slate-400">
+                <a href="#vision" class="hover:text-emerald-400 transition">The Vision</a>
+                <a href="#incentives" class="hover:text-emerald-400 transition">Economic Engine</a>
+                <a href="#jobs" class="hover:text-emerald-400 transition">Opportunities</a>
+            </div>
+            <button class="bg-emerald-600/20 text-emerald-400 border border-emerald-500/30 px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider">
+                Claim Wallet
+            </button>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="min-h-screen flex flex-col items-center justify-center text-center px-6 pt-20 relative">
+            <div class="inline-block px-4 py-1.5 mb-6 rounded-full glass border-emerald-500/20 text-emerald-400 text-xs font-bold tracking-widest uppercase">
+                A Global Restoration Initiative
+            </div>
+            <h1 class="heading text-5xl md:text-8xl font-black mb-6 leading-tight tracking-tighter">
+                CLEAN THE EARTH.<br>
+                <span class="gradient-text">PAID IN USDC.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+                We bridge the gap between hard labor and the digital economy. Instant global payments for the hands that build the future.
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-4 w-full max-w-5xl">
+                <a href="#vision" class="glass p-6 rounded-2xl text-left card-hover group">
+                    <div class="w-10 h-10 bg-emerald-500/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-emerald-500/20 transition">
+                        <svg class="w-6 h-6 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    </div>
+                    <h3 class="heading text-xl font-bold mb-2">The Vision</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">Turning toxic waste into multi-generational wealth for the common man.</p>
+                </a>
+                
+                <a href="#incentives" class="glass p-6 rounded-2xl text-left card-hover group">
+                    <div class="w-10 h-10 bg-sky-500/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-sky-500/20 transition">
+                        <svg class="w-6 h-6 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="heading text-xl font-bold mb-2">Stable Economy</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">Payments issued in United States Digital Currency (USDC) for global stability.</p>
+                </a>
+
+                <a href="#jobs" class="glass p-6 rounded-2xl text-left card-hover group">
+                    <div class="w-10 h-10 bg-purple-500/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-500/20 transition">
+                        <svg class="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="heading text-xl font-bold mb-2">Open Enrollment</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">From the factory floor to the foreman's office, every role is open.</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- The Vision Section -->
+        <section id="vision" class="py-32 px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="heading text-4xl md:text-5xl font-black mb-6">Real Labor. <span class="text-emerald-400">Digital Pay.</span></h2>
+                        <p class="text-slate-400 text-lg mb-6 leading-relaxed">
+                            We use USDC to ensure that whether you're collecting waste in the Pacific or supervising an assembly line in a port city, your pay is secure, instant, and borderless.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-3">
+                                <div class="mt-1 text-emerald-500">â</div>
+                                <p class="text-slate-300"><strong>Instant Settlement:</strong> Work today, get paid in USDC tonight. No waiting for banks.</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="mt-1 text-emerald-500">â</div>
+                                <p class="text-slate-300"><strong>Family Wallets:</strong> Secure digital accounts for families to manage home expenses easily.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-emerald-500/20 blur-3xl rounded-full"></div>
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&q=80&w=800" class="rounded-3xl relative z-10 shadow-2xl grayscale hover:grayscale-0 transition duration-700" alt="Worker Unity">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Incentives Section -->
+        <section id="incentives" class="py-32 bg-slate-900/50">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="heading text-4xl font-bold mb-4">The <span class="text-sky-400">USDC</span> Standard</h2>
+                    <p class="text-slate-400 max-w-2xl mx-auto">The United States Digital Currency ensures that every Aethelgard worker has a stable foundation.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="glass p-8 rounded-3xl border-sky-500/10">
+                        <h4 class="heading text-xl font-bold text-sky-400 mb-4">Inflation Protection</h4>
+                        <p class="text-sm text-slate-400 leading-relaxed mb-6">By paying in USDC, we protect our workers from local currency volatility. Your hard work keeps its value.</p>
+                        <div class="text-[10px] text-slate-600 font-mono uppercase tracking-widest">Protocol: USDC-STABLE-v4</div>
+                    </div>
+                    <div class="glass p-8 rounded-3xl border-emerald-500/10">
+                        <h4 class="heading text-xl font-bold text-emerald-400 mb-4">Direct Conversion</h4>
+                        <p class="text-sm text-slate-400 leading-relaxed mb-6">Convert USDC directly into Habitat Credits to secure your family's future residency on our off-world clusters.</p>
+                        <div class="text-[10px] text-slate-600 font-mono uppercase tracking-widest">Ratio: 1 USDC = 1 HAB CREDIT</div>
+                    </div>
+                    <div class="glass p-8 rounded-3xl border-purple-500/10">
+                        <h4 class="heading text-xl font-bold text-purple-400 mb-4">Global Remittance</h4>
+                        <p class="text-sm text-slate-400 leading-relaxed mb-6">Send money home to your loved ones anywhere on Earth for pennies, using our proprietary wallet mesh.</p>
+                        <div class="text-[10px] text-slate-600 font-mono uppercase tracking-widest">System: AETHEL-MESH-PAY</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Extended Jobs Section -->
+        <section id="jobs" class="py-32 px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="heading text-5xl font-black mb-6 text-center">Open <span class="gradient-text">Opportunities</span></h2>
+                <p class="text-center text-slate-400 mb-16 max-w-2xl mx-auto">All positions pay in USDC with additional bonus tiers based on collected raw materials.</p>
+                
+                <div class="job-grid">
+                    <!-- Extraction & Waste -->
+                    <div class="p-6 glass rounded-2xl border-emerald-500/10 hover:bg-emerald-500/5 transition cursor-pointer group">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="font-bold text-lg group-hover:text-emerald-400">Waste Recovery Specialist</h4>
+                            <span class="text-[10px] bg-emerald-500/20 text-emerald-400 px-2 py-1 rounded">Daily USDC Pay</span>
+                        </div>
+                        <p class="text-xs text-slate-400 mb-4">Oceanic collection and manual sorting of plastic debris. No experience required.</p>
+                        <div class="text-xs font-bold text-emerald-500">Tier 1 Labor â¢ Coastal</div>
+                    </div>
+
+                    <div class="p-6 glass rounded-2xl border-emerald-500/10 hover:bg-emerald-500/5 transition cursor-pointer group">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="font-bold text-lg group-hover:text-emerald-400">Extraction Foreman</h4>
+                        </div>
+                        <p class="text-xs text-slate-400 mb-4">Manage a team of 50 waste recovery specialists. Leadership and logistics required.</p>
+                        <div class="text-xs font-bold text-emerald-500">USDC High-Tier â¢ Great Hull</div>
+                    </div>
+
+                    <!-- Production -->
+                    <div class="p-6 glass rounded-2xl border-sky-500/10 hover:bg-sky-500/5 transition cursor-pointer group">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="font-bold text-lg group-hover:text-sky-400">Assembly Line Worker</h4>
+                        </div>
+                        <p class="text-xs text-slate-400 mb-4">Fabrication of Lunar-grade modular bricks from recycled ocean HDPE.</p>
+                        <div class="text-xs font-bold text-sky-500">Manufacturing â¢ USDC Base</div>
+                    </div>
+
+                    <div class="p-6 glass rounded-2xl border-sky-500/10 hover:bg-sky-500/5 transition cursor-pointer group">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="font-bold text-lg group-hover:text-sky-400">Refining Plant Tech</h4>
+                        </div>
+                        <p class="text-xs text-slate-400 mb-4">Monitoring chemical purification systems to turn sludge into building blocks.</p>
+                        <div class="text-xs font-bold text-sky-500">Technical â¢ Industrial</div>
+                    </div>
+
+                    <!-- Ship & Logistics -->
+                    <div class="p-6 glass rounded-2xl border-purple-500/10 hover:bg-purple-500/5 transition cursor-pointer group">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="font-bold text-lg group-hover:text-purple-400">Deck Hand</h4>
+                        </div>
+                        <p class="text-xs text-slate-400 mb-4">General maintenance and operation on our 4,000ft 'Great Hull' reclamation vessels.</p>
+                        <div class="text-xs font-bold text-purple-500">Maritime â¢ Sea-Stay</div>
+                    </div>
+
+                    <div class="p-6 glass rounded-2xl border-purple-500/10 hover:bg-purple-500/5 transition cursor-pointer group">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="font-bold text-lg group-hover:text-purple-400">Cargo Logistics Clerk</h4>
+                        </div>
+                        <p class="text-xs text-slate-400 mb-4">Inventory management and tracking of raw materials destined for orbit.</p>
+                        <div class="text-xs font-bold text-purple-500">Admin â¢ USDC Port</div>
+                    </div>
+
+                    <!-- Advanced -->
+                    <div class="p-6 glass rounded-2xl border-pink-500/10 hover:bg-pink-500/5 transition cursor-pointer group">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="font-bold text-lg group-hover:text-pink-400">Drone Pilot</h4>
+                        </div>
+                        <p class="text-xs text-slate-400 mb-4">Remote operation of deep-sea micro-plastic vacuums.</p>
+                        <div class="text-xs font-bold text-pink-500">Specialist â¢ Remote</div>
+                    </div>
+
+                    <div class="p-6 glass rounded-2xl border-slate-700 hover:bg-white/5 transition cursor-pointer group">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="font-bold text-lg group-hover:text-white">Community Liaison</h4>
+                        </div>
+                        <p class="text-xs text-slate-400 mb-4">Organizing family resources, housing, and schools for Aethelgard colonies.</p>
+                        <div class="text-xs font-bold text-slate-400">Civil â¢ USDC Support</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-24 px-6 text-center border-t border-slate-900 glass mt-20">
+            <div class="mb-12">
+                <h2 class="heading text-3xl font-bold mb-4">Connect Your Wallet</h2>
+                <p class="text-slate-400 mb-8 max-w-md mx-auto">Start earning USDC today. Your destiny is in your hands.</p>
+                <form class="flex flex-col md:flex-row gap-3 max-w-md mx-auto">
+                    <input type="email" placeholder="Email Address" class="bg-slate-800 border border-slate-700 px-6 py-3 rounded-xl flex-grow focus:outline-none focus:border-emerald-500 transition">
+                    <button class="bg-emerald-600 hover:bg-emerald-500 px-8 py-3 rounded-xl font-bold transition whitespace-nowrap">Apply for Wallet</button>
+                </form>
+            </div>
+            
+            <div class="flex justify-center flex-wrap gap-8 mb-12 text-[10px] font-bold text-slate-500 uppercase tracking-widest">
+                <button onclick="showWhiteScreen('Privacy Policy')" class="hover:text-white transition">Privacy</button>
+                <button onclick="showWhiteScreen('Terms of Labor')" class="hover:text-white transition">Terms of Labor</button>
+                <button onclick="showWhiteScreen('USDC & Payment Terms')" class="hover:text-white transition">Payment Terms</button>
+                <button onclick="showWhiteScreen('Incentive Plan & Credits')" class="hover:text-white transition">Incentive Plan</button>
+            </div>
+            <p class="text-[10px] tracking-[1.5em] text-slate-700 uppercase">AETHELGARD GLOBAL â¢ POWERED BY USDC</p>
+        </footer>
+    </div>
+
+    <!-- White Screen (Legal View) -->
+    <div id="legal-view">
+        <button onclick="hideWhiteScreen()" class="mb-12 font-bold uppercase tracking-widest text-xs flex items-center gap-2 hover:opacity-50 transition">
+            â Return to Aethelgard
+        </button>
+        <h1 id="legal-title" class="heading text-4xl font-black mb-8 border-b pb-4 border-slate-200 uppercase tracking-tighter"></h1>
+        <div class="max-w-3xl space-y-6 text-slate-600 leading-relaxed font-light">
+            <p class="font-bold text-black italic">AETHELGARD GLOBAL PROTOCOL v.2.05</p>
+            <p>All Aethelgard laborers are compensated via USDC on the Aethel-Mesh Network. This ensures parity with the United States Digital Currency standard.</p>
+            <p>By accepting labor terms, the worker agrees to receive payments directly to their provided Aethel-Wallet address.</p>
+            <div class="h-96 border-l-2 border-slate-100 pl-8 ml-2 italic text-slate-400">
+                Awaiting final ledger synchronization for full USDC disclosure...
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showWhiteScreen(title) {
+            document.getElementById('main-view').style.display = 'none';
+            document.getElementById('legal-view').style.display = 'block';
+            document.getElementById('legal-title').innerText = title;
+            window.scrollTo(0, 0);
+        }
+
+        function hideWhiteScreen() {
+            document.getElementById('main-view').style.display = 'block';
+            document.getElementById('legal-view').style.display = 'none';
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+    </script>
+</body>
+</html>
+
